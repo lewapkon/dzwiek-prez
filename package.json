@@ -1,7 +1,7 @@
 {
   "name": "dzwiek-prez",
-  "version": "0.1",
-  "description": "Presentation about representing sounds in a computer (in Polish)."
+  "version": "0.1.0",
+  "description": "Presentation about representing sounds in a computer (in Polish).",
   "scripts": {
     "test": "grunt test",
     "start": ""
