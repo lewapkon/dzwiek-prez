@@ -90,11 +90,11 @@
 	</head>
 
 	<body>
-		<!--
+
 		<div id="wrap-current-slide" class="slides">
 			<iframe src="/?receiver" width="1280" height="1024" id="current-slide"></iframe>
 		</div>
-		-->
+
 		<div id="wrap-next-slide" class="slides">
 			<iframe src="/?receiver" width="640" height="512" id="next-slide"></iframe>
 			<span>UPCOMING:</span>
@@ -108,7 +108,7 @@
 		var socketId = '{{socketId}}';
 		var socket = io.connect(window.location.origin);
 		var notes = document.getElementById('notes');
-		//var currentSlide = document.getElementById('current-slide');
+		var currentSlide = document.getElementById('current-slide');
 		var nextSlide = document.getElementById('next-slide');
 
 		socket.on('slidedata', function(data) {
@@ -122,10 +122,9 @@
 				notes.innerHTML = data.notes;
 			}
 
-			//currentSlide.contentWindow.Reveal.slide(data.indexh, data.indexv);
+			currentSlide.contentWindow.Reveal.slide(data.indexh, data.indexv);
 			nextSlide.contentWindow.Reveal.slide(data.nextindexh, data.nextindexv);
 		});
-		/*
 		socket.on('fragmentdata', function(data) {
 			// ignore data from sockets that aren't ours
 			if (data.socketId !== socketId) { return; }
@@ -137,7 +136,6 @@
 				currentSlide.contentWindow.Reveal.prevFragment();
 			}
 		});
-		*/
 		</script>
 
 	</body>
