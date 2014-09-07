@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Jak komputer widzi dźwięki</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Presentation about representing sounds in a computer (in Polish).">
+		<meta name="author" content="Paweł Koniarski">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -73,18 +73,28 @@
 							<li>częstotliwości próbkowania (ang. <em>sampling rate</em>),</li>
 							<li>dokładności zapisu liczbowego próbki (ang. <em>audio bit depth</em>).</li>
 						</ul>
-						<aside class="notes">Jakość próbki zależy od dwóch czynników: częstotliwości próbkowania oraz dokładności zapisu liczbowego próbki. Częstotliwość próbkowania oznacza ile razy na sekundę został dokonany pomiar amplitudy. Natomiast druga z wymienionych przeze mnie cech próbki oznacza ile jest możliwych wartości amplitudy dźwięku.</aside>
+						<aside class="notes">Jakość próbki zależy od dwóch czynników: częstotliwości próbkowania oraz dokładności zapisu liczbowego próbki. Częstotliwość próbkowania oznacza ile razy na sekundę został dokonany pomiar amplitudy. Natomiast druga z wymienionych przeze mnie cech próbki oznacza ile jest możliwych wartości amplitudy dźwięku. Oczywiście jakość dźwięku wzrasta wraz ze wzrostem obu tych wielkości. Tym samym wzrasta rozmiar otrzymywanych plików.</aside>
 					</section>
+				</section>
+				<section>
 					<section>
 						<h3>Wave</h3>
 						<p>Często wykorzystywany format do zapisu dźwięku nieskompresowanego.</p>
-						<p>Najczęściej używany do zapisu na płytach CD.</p>
-						<aside class="notes">Oczywiście jakość dźwięku wzrasta wraz ze wzrostem obu tych wielkości. Tym samym wzrasta rozmiar otrzymywanych plików. Płyty muzyczne CD zapisywane są przy częstotliwości próbkowania równej 44100Hz oraz każda wartość zapisywana jest na szesnastu bitach, czyli mamy 65536 możliwych wartości.</aside>
+						<p>Najczęściej używany do zapisu na płytach CD:</p>
+						<ul>
+							<li>częstotliwość próbkowania: 44,1kHz,</li>
+							<li>każda wartość zapisana na 16 bitach.</li>
+						</ul>
+						<aside class="notes">Format wave jest zazwyczaj używany do zapisu dźwięków nieskompresowanych. Jedna z jego wersji jest bardzo często używana do zapisywania płyt muzycznych CD. Na takiej płycie zwykle mamy pliki z częstotliwością próbkowania równą 44100Hz oraz każda wartość zapisywana jest na szesnastu bitach, czyli mamy 65536 możliwych wartości.</aside>
 					</section>
-				</section>
-
-				<section>
-					
+					<section>
+						<h3>Ile zajmuje takie nieskompresowane nagranie</h3>
+						<p>Rozmiar pliku zawierającego minutę nagrania w formacie jak na płycie CD:</p>
+						<p>$\frac{60\mathrm{s} \cdot 44100\frac{\text{próbek}}{\mathrm{s}} \cdot 16\frac{\mathrm{b}}{\text{próbkę}}}{8\frac{\mathrm{b}}{\mathrm{B}} \cdot 10^6\frac{\mathrm{B}}{\mathrm{MB}}}$<span class="fragment">$\cdot 2$</span><span class="fragment">$\ =10.584\mathrm{MB}$</span></p>
+					</section>
+					<section>
+						<h3>MP3</h3>						
+					</section>
 				</section>
 			</div>
 		</div>
