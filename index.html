@@ -79,6 +79,7 @@
 				<section>
 					<section>
 						<h2>Formaty zapisu dźwięku</h2>
+						<br/>
 						<h3>Wave</h3>
 						<p>Często wykorzystywany format do zapisu dźwięku nieskompresowanego.</p>
 						<p>Najczęściej używany do zapisu na płytach CD:</p>
@@ -94,7 +95,43 @@
 						<p>$\frac{60\mathrm{s} \cdot 44100\frac{\text{próbek}}{\mathrm{s}} \cdot 16\frac{\mathrm{b}}{\text{próbkę}}}{8\frac{\mathrm{b}}{\mathrm{B}} \cdot 10^6\frac{\mathrm{B}}{\mathrm{MB}}}$<span class="fragment">$\cdot 2$</span><span class="fragment">$\ =10.584\mathrm{MB}$</span></p>
 					</section>
 					<section>
-						<h3>MP3</h3>						
+						<h3>FLAC</h3>
+						<ul>
+							<li>kompresja bezstratna (podobna do zip/rar),</li>
+							<li>strumieniowość,</li>
+							<li>małe wymagania sprzętowe,</li>
+							<li>odporność na błędy,</li>
+							<li>metadane.</li>
+						</ul>
+						<br/><br/>
+						<h6>Inne formaty kompresji bezstratnej:</h4>
+						<ul>
+							<li>OGG (FLAC),</li>
+							<li>AIFF,</li>
+							<li>APE.</li>
+						</ul>
+						<aside class="notes">odporność na błędy &ndash; podział pliku na ramki ogranicza błąd strumienia do poszczególnej ramki</aside>
+					</section>
+					<section>
+						<h3>MP3</h3>
+						<p>Kompresja stratna bazująca na wadach ludzkiego ucha. Matematyczny opis tychże cech nazywa się <strong>modelem psychoakustycznym.</strong></p>
+						<p>Pozwala na nawet dziesięciokrotne zmniejszenie objętości pliku bez utraty słyszalnej jakości.</p>
+						<h6>Inne formaty kompresji stratnej:</h4>
+						<ul>
+							<li>WMA,</li>
+							<li>OGG (Vorbis),</li>
+							<li>AAC (M4A).</li>
+						</ul>
+						<aside class="notes">Człowiek słyszy od ok. 20Hz do 20kHz, przy czym dobrze słyszy do 5kHz. W przypadku gdy nakładają się na siebie dwa dźwięki o podobnej częstotliwości, słyszymy tylko głośniejszy z nich.</aside>
+					</section>
+					<section>
+						<h3>MIDI</h3>
+						<p>Komputerowy odpowiednik partytury.</p>
+						<p><strong>Sekwencer</strong> &ndash; specjalny program umożliwiający komponowanie muzyki w postaci nutowej.</p>
+						<p>Umożliwia wymianę danych z elektronicznymi instrumentami muzycznymi (np. keyboardami).</p>
+						<audio controls>
+							<source src="http://upload.wikimedia.org/wikipedia/commons/5/5b/Ented%2C_Nokturn_a-moll_-_Jesienny.ogg" type="audio/ogg">
+						</audio>
 					</section>
 				</section>
 			</div>
