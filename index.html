@@ -49,20 +49,42 @@
 					<p><small>Autor: Paweł Koniarski</small></p>
 				</section>
 
-				<section class="">
-					<h3>Czym jest dźwięk?</h3>
-					<p>Fala akustyczna o płynnie zmieniającej się amplitudzie, trudna do opisania wzorem matematycznym.</p>
-					<img src="images/fala-dzwiekowa.png"/>
-					<p class="fragment">Dlatego aby umożliwić przechowywanie dźwięków na komputerze dokonuje się ich <strong>digitalizacji</strong>.</p>
+				<section>
+					<section>
+						<h3>Czym jest dźwięk?</h3>
+						<p>Fala akustyczna o płynnie zmieniającej się amplitudzie, trudna do opisania wzorem matematycznym.</p>
+						<img src="images/fala-dzwiekowa.png"/>
+						<p class="fragment">Dlatego aby umożliwić przechowywanie dźwięków na komputerze dokonuje się ich <strong>digitalizacji</strong>.</p>
 
-					<aside class="notes">Dźwięk jest falą akustyczną, której amplituda zmienia się płynnie w czasie. W każdym momencie wielkość amplitudy może być inna. Opisanie takiej fali wzorem matematycznym byłoby trudne, dlatego, aby dźwięki mogły być przechowywane na komputerze, dokonuje się ich digitalizacji.</aside>
+						<aside class="notes">Dźwięk jest falą akustyczną, której amplituda zmienia się płynnie w czasie. W każdym momencie wielkość amplitudy może być inna. Opisanie takiej fali wzorem matematycznym byłoby trudne, dlatego, aby dźwięki mogły być przechowywane na komputerze, dokonuje się ich digitalizacji.</aside>
+					</section>
+					<section>
+						<h3>Digitalizacja</h3>
+						<p>Zamiana na postać cyfrową.</p>
+						<br/>
+						<p><strong>Próbkowanie</strong> (ang. <em>sampling</em>) &ndash; pomiar wartości amplitudy dźwięku w równych odstępach czasu i zapisanie tych wartości w postaci liczbowej.</p>
+						<p><strong>Próbka</strong> (ang. <em>sample</em>) &ndash; zapis dźwięku powstały przy użyciu próbkowania.</p>
+						<aside class="notes">Digitalizacja to zamiana czegoś na podstać cyfrową. W przypadku dźwięków mierzy się wartości amplitudy w równych odstępach czasu i zapisuje się je w postaci liczbowej. Taki proces nazywany jest próbkowaniem. Uzyskany w ten sposób zapis dźwięku nazywa się próbką.</aside>
+					</section>
+					<section>
+						<h3>Próbka</h3>
+						<p>Jakość próbki zależy od:</p>
+						<ul>
+							<li>częstotliwości próbkowania (ang. <em>sampling rate</em>),</li>
+							<li>dokładności zapisu liczbowego próbki (ang. <em>audio bit depth</em>).</li>
+						</ul>
+						<aside class="notes">Jakość próbki zależy od dwóch czynników: częstotliwości próbkowania oraz dokładności zapisu liczbowego próbki. Częstotliwość próbkowania oznacza ile razy na sekundę został dokonany pomiar amplitudy. Natomiast druga z wymienionych przeze mnie cech próbki oznacza ile jest możliwych wartości amplitudy dźwięku.</aside>
+					</section>
+					<section>
+						<h3>Wave</h3>
+						<p>Często wykorzystywany format do zapisu dźwięku nieskompresowanego.</p>
+						<p>Najczęściej używany do zapisu na płytach CD.</p>
+						<aside class="notes">Oczywiście jakość dźwięku wzrasta wraz ze wzrostem obu tych wielkości. Tym samym wzrasta rozmiar otrzymywanych plików. Płyty muzyczne CD zapisywane są przy częstotliwości próbkowania równej 44100Hz oraz każda wartość zapisywana jest na szesnastu bitach, czyli mamy 65536 możliwych wartości.</aside>
+					</section>
 				</section>
 
 				<section>
-					<audio class="fragment" data-autoplay controls>
-						<source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg">
-					</audio>
-					<aside class="notes">Notatki</aside>
+					
 				</section>
 			</div>
 		</div>
