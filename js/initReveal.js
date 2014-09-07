@@ -1,5 +1,5 @@
 Reveal.initialize({
-	controls: true,
+	controls: false,
 	progress: true,
 	history: true,
 	center: true,
@@ -25,7 +25,7 @@ Reveal.initialize({
 		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true },
-        { src: 'plugin/multiplex/client.js', async: true }
+        	{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true },
+        	{ src: 'plugin/multiplex/client.js', async: true }
 	]
 });
