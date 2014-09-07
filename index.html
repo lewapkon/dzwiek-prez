@@ -129,10 +129,17 @@
 						<p>Komputerowy odpowiednik partytury.</p>
 						<p><strong>Sekwencer</strong> &ndash; specjalny program umożliwiający komponowanie muzyki w postaci nutowej.</p>
 						<p>Umożliwia wymianę danych z elektronicznymi instrumentami muzycznymi (np. keyboardami).</p>
+						<p>Ma bardzo małą objętość, lecz dźwięk jest ograniczony do ustalonego z góry zbioru instrumentów</p>
+						<br/>
+						<p><small>Przykład muzyki stworzonej w formacie MIDI:</small></p>
 						<audio controls>
 							<source src="http://upload.wikimedia.org/wikipedia/commons/5/5b/Ented%2C_Nokturn_a-moll_-_Jesienny.ogg" type="audio/ogg">
 						</audio>
+						<aside class="notes">wymiana danych &ndash; pozwala na zapisywanie w pamięci komputera granej na instrumencie muzyki, w celu jej późniejszej edycji<br/>objętość rzędu kilkunastu lub kilkudziesięciu kB, gdyż określa tylko wysokość każdego dźwięku i jego czas trwania<br/>dźwięk ograniczony do ustalonego z góry zestawu instrumentów (nie można w ten sposób zapisać np. głosu ludzkiego)</aside>
 					</section>
+				</section>
+				<section>
+					<h2>Dziękuję za uwagę</h2>
 				</section>
 			</div>
 		</div>
@@ -145,7 +152,9 @@
 		Reveal.addEventListener('slidechanged', function(event) {
 			var notesDOM = document.getElementById('notes');
 			var notes = event.currentSlide.querySelector('.notes');
-			notesDOM.innerHTML = notes.innerHTML.replace(/\n\s+/g, '\n');
+			notes = typeof notes !== 'undefined' && notes !== null && 'innerHTML' in notes ? notes.innerHTML : '';
+
+			notesDOM.innerHTML = notes.replace(/\n\s+/g, '\n');
 		})
 		</script>
 	</body>
