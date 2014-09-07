@@ -55,19 +55,28 @@
 					<img src="images/fala-dzwiekowa.png"/>
 					<p class="fragment">Dlatego aby umożliwić przechowywanie dźwięków na komputerze dokonuje się ich <strong>digitalizacji</strong>.</p>
 
-					<aside class="notes">Dźwięk jest falą akustyczną, której amplituda zmienia się płynnie w czasie. W każdym momencie wielkość amplitudy może być inna. Opisanie takiej fali wzorem matematycznym byłoby trudne, dlatego, aby można je było przechowywać na komputerze, dokonuje się digitalizacji dźwięków.</aside>
+					<aside class="notes">Dźwięk jest falą akustyczną, której amplituda zmienia się płynnie w czasie. W każdym momencie wielkość amplitudy może być inna. Opisanie takiej fali wzorem matematycznym byłoby trudne, dlatego, aby dźwięki mogły być przechowywane na komputerze, dokonuje się ich digitalizacji.</aside>
 				</section>
 
 				<section>
-					
+					<audio class="fragment" data-autoplay controls>
+						<source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+					</audio>
+					<aside class="notes">Notatki</aside>
 				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 		<script src="js/initReveal.js"></script>
 
+		<script type="text/javascript">
+		Reveal.addEventListener('slidechanged', function(event) {
+			var notesDOM = document.getElementById('notes');
+			var notes = event.currentSlide.querySelector('.notes');
+			notesDOM.innerHTML = notes.innerHTML.replace(/\n\s+/g, '\n');
+		})
+		</script>
 	</body>
 </html>

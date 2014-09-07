@@ -385,6 +385,13 @@ var Reveal = (function(){
 
 		// Cache references to elements
 		dom.controls = document.querySelector( '.reveal .controls' );
+		
+		createSingletonNode( dom.wrapper, 'aside', 'prevnext',
+			'<a href="#" class="navigate-prev">prev</a> ' + 
+			'<a href="#" class="navigate-next">next</a>' +
+			'<div id="notes"></div>' );
+
+		dom.prevnext = document.querySelector( '.prevnext' );
 
 		// There can be multiple instances of controls throughout the page
 		dom.controlsLeft = toArray( document.querySelectorAll( '.navigate-left' ) );
@@ -549,6 +556,7 @@ var Reveal = (function(){
 		dom.wrapper.setAttribute( 'data-background-transition', config.backgroundTransition );
 
 		dom.controls.style.display = config.controls ? 'block' : 'none';
+		dom.prevnext.style.display = config.controls ? 'block' : 'none';
 		dom.progress.style.display = config.progress ? 'block' : 'none';
 
 		if( config.rtl ) {
@@ -2659,7 +2667,7 @@ var Reveal = (function(){
 		if( hasFocus || (event.shiftKey && event.keyCode !== 32) || event.altKey || event.ctrlKey || event.metaKey ) return;
 
 		// While paused only allow "unpausing" keyboard events (b and .)
-		if( isPaused() && [66,190,191].indexOf( event.keyCode ) === -1 ) {
+		if( isPaused() && [66,190,191,17].indexOf( event.keyCode ) === -1 ) {
 			return false;
 		}
 
@@ -2719,8 +2727,8 @@ var Reveal = (function(){
 				case 32: isOverview() ? deactivateOverview() : event.shiftKey ? navigatePrev() : navigateNext(); break;
 				// return
 				case 13: isOverview() ? deactivateOverview() : triggered = false; break;
-				// b, period, Logitech presenter tools "black screen" button
-				case 66: case 190: case 191: togglePause(); break;
+				// b, period, Logitech presenter tools "black screen" button (kindle classic's keyboard button works aswell)
+				case 66: case 190: case 191: case 17: togglePause(); break;
 				// f
 				case 70: enterFullscreen(); break;
 				default:
